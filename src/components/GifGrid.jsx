@@ -1,9 +1,12 @@
-import { Fragment } from 'react'
+import { Fragment, useEffect } from 'react'
 import { getGifs } from '../helpers/getGifs'
 
 export const GifGrid = ({ category }) => {
   
-  getGifs( category )
+  useEffect(() => {
+    getGifs( category )
+  }, [category])
+  
 
   return (
     <Fragment>
