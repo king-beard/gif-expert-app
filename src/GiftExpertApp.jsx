@@ -6,9 +6,9 @@ export const GiftExpertApp = () => {
 
   const [categories, setCategories] = useState(['Baki', 'Dragon Ball Z'])
 
-  const onAddCategory = (value) => {
-    if(categories.includes(value)) return
-    setCategories([ ...categories, value ])
+  const onAddCategory = (newCategory) => {
+    if(categories.includes(newCategory)) return
+    setCategories([ newCategory, ...categories ])
   }
 
   return (
