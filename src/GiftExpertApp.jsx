@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react"
 import { AddCategory } from "./components/AddCategory"
+import { GifGrid } from "./components/GifGrid"
 
 export const GiftExpertApp = () => {
 
@@ -15,7 +16,7 @@ export const GiftExpertApp = () => {
       <h1>GiftExpertApp</h1>
       <AddCategory onNewCategory={ value => onAddCategory(value) } />
       <ol>
-        { categories.map((category, i) => <li key={`${category}-${i}`}>{ category }</li>)  }
+        { categories.map((category, i) => <GifGrid key={`${category}-${i}`} category={ category } /> ) }
       </ol>
     </Fragment>
   )
